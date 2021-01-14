@@ -1,6 +1,6 @@
 ## React
 
-### Section - 2 (JSX)
+### Section - 1 (JSX)
 
 - Why **create-react-app**?
 
@@ -54,7 +54,7 @@ JSX - <div style={{ backgroundColor: 'red' }}></div>
 - Can use variables in JSX with **{variableName}**
 - Can call functions in JSX with **{functionName()}**
 
-### Section 3 - (Communicating with props)
+### Section 2 - (Communicating with props)
 
 **Three main points to look at:**
 
@@ -159,3 +159,13 @@ ReactDOM.render(<App />, document.querySelector("#root"));
 ```
 
 - Any JSX nested inside <ApprovalCard> can be accessed using **props.children**
+
+### Section 3 - Class Based Components
+
+Difference between **Class Based Components** and **Function Based Components**
+
+| Functional Components           | Class Components                                                       |
+| ------------------------------- | ---------------------------------------------------------------------- |
+| Can produce JSX to show content | Can produce JSX to show content                                        |
+| :no_entry_sign:                 | Can use the **Lifecycle Method** system to run codes at specific times |
+| :no_entry_sign:                 | Can use the **state** system to update content on the screen           |
