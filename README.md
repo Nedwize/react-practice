@@ -1,5 +1,7 @@
 ## React
 
+### Section - 2 (JSX)
+
 - Why **create-react-app**?
 
   - It installs various dependencies like Webpack and Babel on its own.
@@ -37,3 +39,6 @@ _We use **import** when using ES2015 Modules and **require** while using CommonJ
 HTML - <div style="background-color: red;"></div>
 JSX - <div style={{ backgroundColor: 'red' }}></div>
 ```
+
+Can use variables in JSX with **{variableName}**
+Can call functions in JSX with **{functionName()}**
