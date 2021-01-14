@@ -130,3 +130,32 @@ ReactDOM.render(<App />, document.querySelector("#root"));
 
 - Props are used to pass data from a parent component to a child component
 - User to customize a Child Component
+- Pass props in from the Parent component as follows:
+
+```javascript
+<CommentDetail author="Name" />
+```
+
+- An object containing these props will be passed to the Component function
+- Catch the object data with **props.author** in the Component.js file
+
+### Nested Components
+
+- Components can be passed in other components as props
+
+```javascript
+<ApprovalCard>
+  <CommentDetail author="Sam" />
+</ApprovalCard>
+```
+
+- The component called **CommentDetail** is passed in **ApprovalCard** as a prop
+- This can be accessed in **ApprovalCard** as follows:
+
+```javascript
+{
+  props.children;
+}
+```
+
+- Any JSX nested inside <ApprovalCard> can be accessed using **props.children**
