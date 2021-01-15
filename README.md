@@ -169,3 +169,38 @@ Difference between **Class Based Components** and **Function Based Components**
 | Can produce JSX to show content | Can produce JSX to show content                                        |
 | :no_entry_sign:                 | Can use the **Lifecycle Method** system to run codes at specific times |
 | :no_entry_sign:                 | Can use the **state** system to update content on the screen           |
+
+_Note: Functional components can now use Hooks to perform in the same way as Class Components_
+
+- Which one to use? _Class or Functional Components?_
+
+React Hooks have a very steep learning curve. The easier method is to: **Learn Class Components** --> **Learn Hooks** --> **Learn Redux**. Also almost every big organization uses both Class and Functional based components.
+
+##### Rules of a Class Component
+
+- Must be a Javascript Class
+- Must extend React.Component or _import React, {Component} from 'react'_
+- Must define render method that returns some JSX to render
+
+```javascript
+import React,{ Component } from "react";
+
+class ClassComponent extends Component {
+  render() {
+    return (
+      // Some JSX
+    )
+  }
+}
+
+export default ClassComponent;
+```
+
+### Section 4 - The State
+
+##### Rules of State
+
+- Only usable with a Class Component. _Can be used with hooks in functional components_
+- State is a JS object that contains data which can be used while rendering a state
+- **Updating the state** on a component **causes components to instantly render**
+- State must be initialized when a component is created
