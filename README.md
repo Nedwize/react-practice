@@ -202,5 +202,40 @@ export default ClassComponent;
 
 - Only usable with a Class Component. _Can be used with hooks in functional components_
 - State is a JS object that contains data which can be used while rendering a state
-- **Updating the state** on a component **causes components to instantly render**
+- **Updating** the state on a component causes components to **instantly render**
 - State must be initialized when a component is created
+- State can only be changed using the function **setState**
+
+**Note:** The key to rerender a component is to change its component
+
+##### Initializing state through Constructors
+
+- Initialize a Constructor function
+- Call Super with props as argument inside the constructor. _To make sure the Parent's Constructor function gets called, we call super()_
+
+```javascript
+import React,{ Component } from "react";
+
+class ClassComponent extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {data: null}
+  }
+
+  render() {
+    return (
+      // Some JSX
+    )
+  }
+}
+
+export default ClassComponent;
+```
+
+- To update the state, call the **setState** function with the new state object in the argument.
+
+```javascript
+this.setState({ latitude: data.coords.latitude });
+```
