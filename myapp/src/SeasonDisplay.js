@@ -7,7 +7,9 @@ class SeasonDisplay extends Component {
     super(props); // To make sure the Parent's Constructor function gets called, we call super()
 
     this.state = { latitude: 0, errorMessage: "" };
+  }
 
+  componentDidMount() {
     window.navigator.geolocation.getCurrentPosition(
       (data) => {
         //   Anytime you want to update your state, you call the setState function
@@ -18,6 +20,7 @@ class SeasonDisplay extends Component {
       (err) => this.setState({ errorMessage: err.message })
     );
   }
+
   render() {
     if (this.state.latitude && !this.state.errorMessage) {
       return <div>Latitude: {this.state.latitude}</div>;

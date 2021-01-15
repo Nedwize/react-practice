@@ -247,3 +247,19 @@ this.setState({ latitude: data.coords.latitude });
 - You can chain if else statements inside the **render()** method and return the JSX inside the if-else
 
 ### Section 5 - The Lifecycle Method
+
+| Component Lifecycle                |
+| ---------------------------------- |
+| Constructor Called                 |
+| Component rendered                 |
+| _Content is now visible_           |
+| componentDidMount() is called      |
+| _waiting for updates_              |
+| componentDidUpdate() is called     |
+| _wait till component is not shown_ |
+| componentWillUnmount() is called   |
+
+##### Application of Lifecycle Methods
+
+- You can do data loading and API calls within both the **constructor** as well as the **componentDidMount()** method, but for standardization and clearer code, componentDidMount method is preferred
+- There are other lifecycle methods such as _shouldComponentUpdate(), getDerivedStateFromProps() and getSnapshotBeforeUpdate()_ but they are rarely used
