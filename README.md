@@ -206,7 +206,7 @@ export default ClassComponent;
 - State must be initialized when a component is created
 - State can only be changed using the function **setState**
 
-**Note:** The key to rerender a component is to change its component
+**Note:** The key to rerender a component is to change its state
 
 ##### Initializing state through Constructors
 
@@ -239,3 +239,9 @@ export default ClassComponent;
 ```javascript
 this.setState({ latitude: data.coords.latitude });
 ```
+
+##### Conditional Rendering
+
+- You can chain if else statements inside the **render()** method and return the JSX inside the if-else
+
+### Section 5 - The Lifecycle Method
