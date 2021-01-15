@@ -221,7 +221,9 @@ class ClassComponent extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {data: null}
+    this.state = {data: null} // Initialized State
+
+    this.setState = {date: 123} // State Updated
   }
 
   render() {
