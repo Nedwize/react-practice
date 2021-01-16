@@ -9,6 +9,8 @@ class SeasonDisplay extends Component {
     this.state = { latitude: 0, errorMessage: "" };
   }
 
+  state = { latitude: 0, errorMessage= "" }; //If we use this method of initialization, we can delete the constructor
+
   componentDidMount() {
     window.navigator.geolocation.getCurrentPosition(
       (data) => {

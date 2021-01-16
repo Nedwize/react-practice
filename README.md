@@ -263,3 +263,14 @@ this.setState({ latitude: data.coords.latitude });
 
 - You can do data loading and API calls within both the **constructor** as well as the **componentDidMount()** method, but for standardization and clearer code, componentDidMount method is preferred
 - There are other lifecycle methods such as _shouldComponentUpdate(), getDerivedStateFromProps() and getSnapshotBeforeUpdate()_ but they are rarely used
+
+##### Alternate method for initialization of State
+
+- The state can be initialized by writing this snippet in the class component
+
+```javascript
+state = { latitude: null, errorMessage: "" };
+```
+
+- This is equivalent to initializing the state within the constructor. Using this syntax, the constructor is not needed. Instead, it is compiled into a constructor when it goes through the Babel pipeline.
+- Passing down the state as props in a component will
