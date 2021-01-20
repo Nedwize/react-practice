@@ -273,4 +273,12 @@ state = { latitude: null, errorMessage: "" };
 ```
 
 - This is equivalent to initializing the state within the constructor. Using this syntax, the constructor is not needed. Instead, it is compiled into a constructor when it goes through the Babel pipeline.
-- Passing down the state as props in a component will
+- **Passing down the state as props in a child component will force the child component to rerender too**
+
+#### Default Props
+
+```javascript
+componentName.defaultProps = {
+  message: "Loading!",
+};
+```
