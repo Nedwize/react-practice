@@ -20,6 +20,6 @@
 - ImageList
 - Mandatory App Component
 
-| APP Component |
-| ------------- | --------- |
-| Search Bar    | ImageList |
+App Component
+|--- SearchBar
+|--- ImageList
