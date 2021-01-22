@@ -298,15 +298,7 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div className="ui segment">
-        <form className="ui form">
-          <div className="field">
-            <label>Search Image</label>
-            <input type="text" onChange={this.onInputChange}></input> // Pass
-            this prop here
-          </div>
-        </form>
-      </div>
+      <input type="text" onChange={this.onInputChange}></input> // Pass this prop here
     );
   }
 }
@@ -321,3 +313,29 @@ class SearchBar extends Component {
 ```javascript
 <input type="text" onChange={(e) => { console.log(e.target.value) }}>
 ```
+
+### Controlled VS Uncontrolled Events
+
+> Controlled Component
+
+```javascript
+state = { term: "" };
+render() {
+    return (
+      <input
+        type="text"
+        placeholder="Search for a term"
+        value={this.state.term}
+        onChange={(e) => this.setState({ term: e.target.value })}
+      ></input>
+    );
+  }
+```
+
+> Uncontrolled Component
+
+- See above example under **Handling Events**
+
+**Why Controlled Components?**
+
+_We do not prefer storing values in HTML elements. Storing data in React Components as states makes more sense. It also makes it easy to get the Realtime value of the field without traversing the DOM_
