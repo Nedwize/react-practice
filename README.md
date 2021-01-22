@@ -282,3 +282,42 @@ componentName.defaultProps = {
   message: "Loading!",
 };
 ```
+
+### Handling Events
+
+- Pass a prop called **onChange={}** to the component or element you want to handle this event at
+- Call a function within this prop and define it to handle this event
+- Eg.
+
+```javascript
+class SearchBar extends Component {
+  onInputChange(event) {
+    // Function to handle this event
+    console.log(event.target.value);
+  }
+
+  render() {
+    return (
+      <div className="ui segment">
+        <form className="ui form">
+          <div className="field">
+            <label>Search Image</label>
+            <input type="text" onChange={this.onInputChange}></input> // Pass
+            this prop here
+          </div>
+        </form>
+      </div>
+    );
+  }
+}
+```
+
+-**Different Events are going to be wired to different property names**
+
+- More examples, _onClick()_, _onChange()_, _onSubmit()_
+
+- **Alternate Handlers for events**
+
+```javascript
+<input type="text" onChange={(e) => { console.log(e.target.value) }}>
+```
