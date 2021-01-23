@@ -339,3 +339,9 @@ render() {
 **Why Controlled Components?**
 
 _We do not prefer storing values in HTML elements. Storing data in React Components as states makes more sense. It also makes it easy to get the Realtime value of the field without traversing the DOM_
+
+#### Communicating from Child to Parent
+
+> We can pass data with prop functions from Child to Parent by passing down a reference of a Parent function down to the Child with props
+
+See the onSubmit() function in App.js, PICS project for more details
