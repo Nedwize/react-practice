@@ -345,3 +345,7 @@ _We do not prefer storing values in HTML elements. Storing data in React Compone
 > We can pass data with prop functions from Child to Parent by passing down a reference of a Parent function down to the Child with props
 
 See the onSubmit() function in App.js, PICS project for more details
+
+### Section 6 - Making API calls
+
+> We can make Network requests with Axios or Fetch. Fetch is and inbuilt method. Axios is a third party package.
