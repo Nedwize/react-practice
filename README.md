@@ -349,3 +349,5 @@ See the onSubmit() function in App.js, PICS project for more details
 ### Section 6 - Making API calls
 
 > We can make Network requests with Axios or Fetch. Fetch is and inbuilt method. Axios is a third party package.
+
+### Referencing DOM inside ReactApp
