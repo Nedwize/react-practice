@@ -351,3 +351,41 @@ See the onSubmit() function in App.js, PICS project for more details
 > We can make Network requests with Axios or Fetch. Fetch is and inbuilt method. Axios is a third party package.
 
 ### Referencing DOM inside ReactApp
+
+> We can create Refs inside a Class Based Component to manipulate the DOM within the React App
+
+Eg.
+
+```javascript
+import React from "react";
+
+class ImageCard extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { spans: 0 };
+    this.imageRef = React.createRef();
+  }
+
+  componentDidMount = () => {
+    this.imageRef.current.addEventListener("load", () => {
+      const height = this.imageRef.current.clientHeight;
+      const spans = Math.ceil(height / 20);
+      this.setState({ spans });
+    });
+  };
+
+  render() {
+    return (
+      <div style={{ gridRowEnd: `span ${this.state.spans}` }}>
+        <img
+          ref={this.imageRef}
+          alt={this.props.image.description}
+          src={this.props.image.urls.regular}
+        />
+      </div>
+    );
+  }
+}
+
+export default ImageCard;
+```
