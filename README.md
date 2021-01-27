@@ -470,8 +470,18 @@ Use -
 
 ```javascript
 useEffect(() => {
-  async () => {
+  (async () => {
     await axios.get(URL);
-  };
+  })();
 }, []);
 ```
+
+OR use .then Promises
+
+### :warning: VERY IMPORTANT - Throttling API requests
+
+> Sometimes API requests are tied to events that can place really often, to limit the number of API requests the app generates, we need to throttle them
+
+Use a _setTimer()_ function to limit the API request to every 500ms or so
+
+- The _setTimeout()_ function comes with an ID. You can call the _clearTimeout()_ function with that ID to cancel the execution of that particular _setTimeout()_
