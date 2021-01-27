@@ -389,3 +389,17 @@ class ImageCard extends React.Component {
 
 export default ImageCard;
 ```
+
+**Note: Always remember to create a basic UI and Component Hierarchy**
+
+### Section 6 - Hooks
+
+> Hooks helps Functional Components the power of Class Components
+
+| Functions       | Usage                                                   |
+| --------------- | ------------------------------------------------------- |
+| **useState()**  | Use _state_ in a Functional component                   |
+| **useEffect()** | Can use **Lifecycle Methods** in a Functional Component |
+| **useRef()**    | Lets us create refs like React.createRef()              |
+
+_Hooks enable us to write reusable code in an easy way_
