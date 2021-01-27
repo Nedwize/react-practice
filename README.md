@@ -441,3 +441,37 @@ We can _configure_ code in one of the **3 scenarios**
 - When the component is **rendered for the first time**
 - When the component is **rendered for the first time and whenever it rerendered**
 - When the component is **rendered for the first time and (whenever it is rerendered && some piece of data has changed)**
+
+Usage of **useEffect()** - The _useEffect()_ function takes 2 arguments, a callback function and an array
+
+```javascript
+useEffect(() => {
+  // Do something here
+}, []);
+```
+
+The Second Argument -
+
+- [] - At initial render
+- ...nothing - Run at initial render and also after every rerender
+- [data] - Run at initial render and also rerender if data has changed since last rerender
+
+_Note: The use effect callback argument CANNOT be an async function_
+
+So, instead of -
+
+```javascript
+useEffect(async () => {
+  await axios.get(URL);
+}, []);
+```
+
+Use -
+
+```javascript
+useEffect(() => {
+  async () => {
+    await axios.get(URL);
+  };
+}, []);
+```
