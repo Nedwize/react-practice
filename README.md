@@ -346,11 +346,11 @@ _We do not prefer storing values in HTML elements. Storing data in React Compone
 
 See the onSubmit() function in App.js, PICS project for more details
 
-### Section 6 - Making API calls
+#### Making API calls
 
 > We can make Network requests with Axios or Fetch. Fetch is and inbuilt method. Axios is a third party package.
 
-### Referencing DOM inside ReactApp
+#### Referencing DOM inside ReactApp
 
 > We can create Refs inside a Class Based Component to manipulate the DOM within the React App
 
@@ -408,7 +408,7 @@ We can use a lot of predefined Hooks in React. Also Custom Hooks can be made to 
 
 1. **useState() Hook**
 
-A state ca be defined with this particular piece of code written below:
+A state can be defined with this particular piece of code written below:
 
 ```javascript
 const [name, setName] = useState(null);
@@ -422,7 +422,7 @@ Other Examples:
 - const [counter, setCounter] = useState(1)
 - const [color, setColor] = useState("black")
 
-Can be used to work with _state_ in a functional component. The contrast of useState() (Function Component) and this.state (Class Component) can be shown here.
+The contrast of useState() (Function Component) and this.state (Class Component) can be shown here.
 
 | Process            | Class Components               | Functional Components |
 | ------------------ | ------------------------------ | --------------------- |
