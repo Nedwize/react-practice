@@ -408,7 +408,7 @@ We can use a lot of predefined Hooks in React. Also Custom Hooks can be made to 
 
 1. **useState() Hook**
 
-A state can be defined with this particular piece of code written below:
+> A state can be defined with this particular piece of code written below:
 
 ```javascript
 const [name, setName] = useState(null);
@@ -416,6 +416,8 @@ const [name, setName] = useState(null);
 
 Explanation: Here _name_ is a variable of state, _setName_ function is used to change that variable. Also, _null_ is passed as the initial value of this state.
 name and setName are destructured out of the useState function Array.
+
+_Note: The setter function rerenders the component_
 
 Other Examples:
 
@@ -429,3 +431,13 @@ The contrast of useState() (Function Component) and this.state (Class Component)
 | **Initialization** | state = { term: "" };          | useState("");         |
 | **Reference**      | this.state.term;               | term;                 |
 | **Updates**        | this.setState({ term: "Yo" }); | setTerm("Yo")         |
+
+2. **useEffect() Hook**
+
+> Allows to use Lifecycle methods in Functional Components
+
+We can _configure_ code in one of the **3 scenarios**
+
+- When the component is **rendered for the first time**
+- When the component is **rendered for the first time and whenever it rerendered**
+- When the component is **rendered for the first time and (whenever it is rerendered && some piece of data has changed)**
