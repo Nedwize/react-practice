@@ -403,3 +403,29 @@ export default ImageCard;
 | **useRef()**    | Lets us create refs like React.createRef()              |
 
 _Hooks enable us to write reusable code in an easy way_
+
+We can use a lot of predefined Hooks in React. Also Custom Hooks can be made to perform multiple jobs at the same time.
+
+1. **useState() Hook**
+
+A state ca be defined with this particular piece of code written below:
+
+```javascript
+const [name, setName] = useState(null);
+```
+
+Explanation: Here _name_ is a variable of state, _setName_ function is used to change that variable. Also, _null_ is passed as the initial value of this state.
+name and setName are destructured out of the useState function Array.
+
+Other Examples:
+
+- const [counter, setCounter] = useState(1)
+- const [color, setColor] = useState("black")
+
+Can be used to work with _state_ in a functional component. The contrast of useState() (Function Component) and this.state (Class Component) can be shown here.
+
+| Process            | Class Components               | Functional Components |
+| ------------------ | ------------------------------ | --------------------- |
+| **Initialization** | state = { term: "" };          | useState("");         |
+| **Reference**      | this.state.term;               | term;                 |
+| **Updates**        | this.setState({ term: "Yo" }); | setTerm("Yo")         |
