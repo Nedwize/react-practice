@@ -485,3 +485,11 @@ OR use .then Promises
 Use a _setTimer()_ function to limit the API request to every 500ms or so
 
 - The _setTimeout()_ function comes with an ID. You can call the _clearTimeout()_ function with that ID to cancel the execution of that particular _setTimeout()_
+
+Note: Study about Event Handling
+
+#### Custom Hooks
+
+> They are used to write reusable code in a React Project
+
+Custom hooks _always_ use at least one defined hook internally
