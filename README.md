@@ -493,3 +493,27 @@ Note: Study about Event Handling
 > They are used to write reusable code in a React Project
 
 Custom hooks _always_ use at least one defined hook internally
+
+### Section 7 - Redux
+
+> Redux can be used to manage application state.
+
+#### Redux Cycle
+
+- Action Creator _(Person dropping off the form)_
+- Action _(The Form)_
+- Dispatch _(Form Receiver)_
+- Reducers _(Departments)_
+- State _(Compiled Department Data)_
+
+#### Project Structure in React-Redux
+
+```
+project
+│   README.md
+│   index.js
+│
+└───actions
+└───components
+└───reducers
+```
