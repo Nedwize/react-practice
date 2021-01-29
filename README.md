@@ -517,3 +517,5 @@ project
 └───components
 └───reducers
 ```
+
+Named VS Default Exports
