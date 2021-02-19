@@ -519,3 +519,5 @@ project
 ```
 
 Named VS Default Exports
+
+> Note: Refer for Auth Redirects [StackOverflow](https://stackoverflow.com/questions/45089386/what-is-the-best-way-to-redirect-a-page-using-react-router)
